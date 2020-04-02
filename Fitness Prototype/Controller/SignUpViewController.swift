@@ -65,31 +65,15 @@ class SignUpViewController: UIViewController {
             //show error message
             showError(error!)
         } else {
-            //
-            let firstName = firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            let lastName = lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            let vc = HomeViewController()
             
+            vc.firstName = (firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!
+            vc.lastName = (lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!
+            vc.email = (emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!
+            vc.password = (passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!
+
+            self.transitionToProfile()
             
-            //create user
-            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in
-                //check for error
-                if let err = error {
-                    self.showError("Error creating user")
-                } else {
-                    //user created
-                    let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["firstname" : firstName, "lastname": lastName, "email" : email,"uid": result?.user.uid]) { (error) in
-                        
-                        if error != nil {
-                            self.showError("User data couldn't be saved")
-                        }
-                    }
-                    //transition to birthday screen
-                    self.view.window?.rootViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.birthdayViewController) as! SignUpViewController
-                }
-            }
             
             
             
@@ -101,7 +85,7 @@ class SignUpViewController: UIViewController {
         errorLabel.alpha = 1
     }
     
-    func transitionToHome() {
+    func transitionToProfile() {
         let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as! HomeViewController
         
         view.window?.rootViewController = homeViewController

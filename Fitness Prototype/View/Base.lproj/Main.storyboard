@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IwV-d1-5cA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TPF-4h-S7v">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -41,7 +41,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taiwansunshine" translatesAutoresizingMaskIntoConstraints="NO" id="maC-QT-fiO">
-                                <rect key="frame" x="0.0" y="88" width="394" height="720"/>
+                                <rect key="frame" x="0.0" y="268" width="394" height="360"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -153,53 +153,6 @@
             </objects>
             <point key="canvasLocation" x="1594" y="-188"/>
         </scene>
-        <!--Sign Up View Controller-->
-        <scene sceneID="SyI-zX-jsX">
-            <objects>
-                <viewController id="D4s-Xb-eLh" customClass="SignUpViewController" customModule="Fitness_Prototype" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6UD-tL-AuP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2Ps-vT-ETh">
-                                <rect key="frame" x="40" y="84" width="334" height="738"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gendericon" translatesAutoresizingMaskIntoConstraints="NO" id="F0e-Wl-eEB">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="432"/>
-                                    </imageView>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nS3-le-dEi">
-                                        <rect key="frame" x="0.0" y="452" width="334" height="216"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="216" id="IKv-Ct-Iii"/>
-                                        </constraints>
-                                    </pickerView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYa-kn-6Ty">
-                                        <rect key="frame" x="0.0" y="688" width="334" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="PS2-wi-9c9"/>
-                                        </constraints>
-                                        <state key="normal" title="Next"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="gii-D9-fHf" firstAttribute="bottom" secondItem="2Ps-vT-ETh" secondAttribute="bottom" constant="40" id="0Ow-J3-2Zj"/>
-                            <constraint firstItem="2Ps-vT-ETh" firstAttribute="leading" secondItem="6UD-tL-AuP" secondAttribute="leading" constant="40" id="apb-Zr-V2N"/>
-                            <constraint firstItem="2Ps-vT-ETh" firstAttribute="top" secondItem="gii-D9-fHf" secondAttribute="top" constant="40" id="gNt-x9-0FL"/>
-                            <constraint firstAttribute="trailing" secondItem="2Ps-vT-ETh" secondAttribute="trailing" constant="40" id="kcJ-ym-rXj"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="gii-D9-fHf"/>
-                    </view>
-                    <connections>
-                        <outlet property="genderPickerView" destination="nS3-le-dEi" id="Q5H-TJ-nMz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jFx-ZS-4C2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3096" y="-188"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="lT8-j1-hyh">
             <objects>
@@ -284,10 +237,71 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" id="LMd-PP-Y0e">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JJy-iV-W9X">
+                                        <rect key="frame" x="40" y="84" width="334" height="738"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="gendericon" translatesAutoresizingMaskIntoConstraints="NO" id="iC6-Y2-2Bb">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="321.5"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mJ-e9-nzZ">
+                                                <rect key="frame" x="0.0" y="341.5" width="334" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDw-eI-gNf">
+                                                <rect key="frame" x="0.0" y="382" width="334" height="216"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="216" id="wGm-gX-5j9"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uS-5r-YKy">
+                                                <rect key="frame" x="0.0" y="618" width="334" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Qzm-fY-Bq3"/>
+                                                </constraints>
+                                                <state key="normal" title="Go Back"/>
+                                                <connections>
+                                                    <action selector="goBackPressed:" destination="TPF-4h-S7v" eventType="touchUpInside" id="Ydz-b6-Hmr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfX-jv-9kz">
+                                                <rect key="frame" x="0.0" y="688" width="334" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="JQE-TI-uLB"/>
+                                                </constraints>
+                                                <state key="normal" title="Next"/>
+                                                <connections>
+                                                    <action selector="nextPressed:" destination="TPF-4h-S7v" eventType="touchUpInside" id="jfb-qM-rIk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="JJy-iV-W9X" firstAttribute="leading" secondItem="LMd-PP-Y0e" secondAttribute="leading" constant="40" id="Fpc-4b-CY4"/>
+                                    <constraint firstItem="7u3-Ce-jcH" firstAttribute="bottom" secondItem="JJy-iV-W9X" secondAttribute="bottom" constant="40" id="I8N-SW-1xi"/>
+                                    <constraint firstItem="JJy-iV-W9X" firstAttribute="top" secondItem="7u3-Ce-jcH" secondAttribute="top" constant="40" id="f3k-1l-Bfy"/>
+                                    <constraint firstAttribute="trailing" secondItem="JJy-iV-W9X" secondAttribute="trailing" constant="40" id="xoY-3i-fNn"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="7u3-Ce-jcH"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="VoH-lE-ddj"/>
                     </view>
+                    <connections>
+                        <outlet property="goBackButton" destination="5uS-5r-YKy" id="qYt-LP-7QL"/>
+                        <outlet property="imageView" destination="iC6-Y2-2Bb" id="dae-yW-DZ2"/>
+                        <outlet property="label" destination="8mJ-e9-nzZ" id="0x6-9J-bMt"/>
+                        <outlet property="nextButton" destination="AfX-jv-9kz" id="vFi-me-9Mw"/>
+                        <outlet property="pickerView" destination="rDw-eI-gNf" id="Jb5-3v-ab3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sfo-AT-O8R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -311,53 +325,8 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
-        <!--Sign Up View Controller-->
-        <scene sceneID="268-D4-rjU">
-            <objects>
-                <viewController storyboardIdentifier="BirthdayVC" id="5XW-0Q-q7c" customClass="SignUpViewController" customModule="Fitness_Prototype" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fzT-HZ-QYG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="V6q-2c-Vgf">
-                                <rect key="frame" x="40" y="84" width="334" height="738"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="birthday icon" translatesAutoresizingMaskIntoConstraints="NO" id="sg9-ho-9TW">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="432"/>
-                                    </imageView>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Ql-2b-Kxr">
-                                        <rect key="frame" x="0.0" y="452" width="334" height="216"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="216" id="48K-GQ-JwS"/>
-                                        </constraints>
-                                    </datePicker>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsM-bP-ncR">
-                                        <rect key="frame" x="0.0" y="688" width="334" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="FI1-Qc-wnt"/>
-                                        </constraints>
-                                        <state key="normal" title="Next"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="V6q-2c-Vgf" firstAttribute="leading" secondItem="BjI-mD-5De" secondAttribute="leading" constant="40" id="47o-3Y-uum"/>
-                            <constraint firstItem="BjI-mD-5De" firstAttribute="bottom" secondItem="V6q-2c-Vgf" secondAttribute="bottom" constant="40" id="EBP-aa-Lge"/>
-                            <constraint firstItem="V6q-2c-Vgf" firstAttribute="top" secondItem="BjI-mD-5De" secondAttribute="top" constant="40" id="hEp-OM-uoJ"/>
-                            <constraint firstItem="BjI-mD-5De" firstAttribute="trailing" secondItem="V6q-2c-Vgf" secondAttribute="trailing" constant="40" id="nE9-a4-mIb"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="BjI-mD-5De"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DJk-1J-Dpq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2329" y="-188"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="birthday icon" width="200" height="200"/>
         <image name="gendericon" width="626" height="455"/>
         <image name="taiwansunshine" width="480" height="360"/>
     </resources>

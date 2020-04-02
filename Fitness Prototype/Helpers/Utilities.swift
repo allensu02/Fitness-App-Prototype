@@ -46,6 +46,10 @@ class Utilities {
         button.tintColor = UIColor.black
     }
     
+    static func styleLabel (_ label: UILabel) {
+        label.textColor = color
+        label.font = .systemFont(ofSize: 30)
+    }
     static func isPasswordValid(_ password : String) -> Bool {
         
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
